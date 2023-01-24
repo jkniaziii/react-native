@@ -2,6 +2,7 @@ import { View, Text, Button } from 'react-native'
 import React from 'react'
 import { endBackground, startBackground } from '../Services';
 import BackgroundTask from '../Services/module';
+import MyComponent from './UpdateButton';
 
 
 
@@ -9,10 +10,7 @@ const HomeScreen = () => {
 
 
   const getTask = async () => {
-    console.log("NativeModules  77 :", BackgroundTask);
     BackgroundTask.setAlarm()
-    
-
   }
 
 
@@ -31,6 +29,7 @@ const HomeScreen = () => {
         title='START ALARAM'
         onPress={getTask}
       />
+      <MyComponent />
     </View>
   )
 }
